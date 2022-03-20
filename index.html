@@ -11,33 +11,21 @@
         </title>
     </head>
     <body>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required>
+        <form action="contact.php" method="post">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
 
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" required>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" required>
 
-        <label for="message">Message</label>
-        <input type="text" name="message" id="message" required>
+            <label for="message">Message</label>
+            <input type="text" name="message" id="message" required>
+            
+            <button type="submit">Send</button>
+        </form>   
 
-        <button id="send-btn" onclick="send()">Send</button>
-        
         <script src="js/script.js"></script>
         <script src="js/fontawesome.js"></script>
-        <script src="https://smtpjs.com/v3/smtp.js">
-            function send(){
-                Email.send({
-                Host : "smtp.gmail.com",
-                Username : "asdyrtveflmh@gmail.com",
-                Password : "kcahSmylife228",
-                To : 'asdyrtveflmh@gmail.com',
-                From : document.querySelector("#email").value,
-                Subject : document.querySelector("#name").value,
-                Body : document.querySelector("#message").value
-                }).then(
-                message => alert("Succesful")
-                  );
-            }      
-        </script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
     </body>
 </html>
