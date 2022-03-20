@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
         <title>   
-            Storage Project
+            The coolest form
         </title>
     </head>
     <body>
@@ -25,7 +25,8 @@
         <script src="js/script.js"></script>
         <script src="js/fontawesome.js"></script>
         <script src="https://smtpjs.com/v3/smtp.js">
-            Email.send({
+            function send(){
+                Email.send({
                 Host : "smtp.gmail.com",
                 Username : "asdyrtveflmh@gmail.com",
                 Password : "kcahSmylife228",
@@ -33,9 +34,10 @@
                 From : document.querySelector("#email").value,
                 Subject : document.querySelector("#name").value,
                 Body : document.querySelector("#message").value
-            }).then(
-            message => alert(message)
-            );
+                }).then(
+                message => alert(message)
+                  );
+            }      
         </script>
     </body>
 </html>
